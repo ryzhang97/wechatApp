@@ -2,6 +2,7 @@
 <navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
   <view class="container">
+  <div>{{openid}}</div>
   <button bind:tap="onLogin"> {{login}}</button>
   <button bind:tap="onGetToken"> {{token}}</button>
   </view>
