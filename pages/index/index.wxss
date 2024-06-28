@@ -8,3 +8,6 @@ page {
   flex: 1;
   overflow-y: hidden;
 }
+button{
+  margin-bottom: 10px;
+}
