@@ -5,7 +5,7 @@ const header = {'content-type': 'application/json'}
  function post(url, data) {
   return new Promise(resolve => {
     wx.request({
-      url: app.ip + url,
+      url: app.apiUrl + url,
       method: 'POST',
       header,
       data,
@@ -26,7 +26,7 @@ const header = {'content-type': 'application/json'}
  function get(url, data) {
   return new Promise(resolve => {
     wx.request({
-      url: app.ip + url,
+      url: app.apiUrl + url,
       data,
       success(res) {
         resolve(res.data.data)

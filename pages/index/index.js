@@ -1,24 +1,16 @@
 // index.js
 import {getOpenid} from '../../pub'
+const app=getApp()
 Page({
   data: {
-    login: "",
-    token: "",
-    openid:""
+    url: "",
   },
   onShow() {
-    this.setData({
-      login: "getOpenid",
-      token: 'getToken'
-    })
-  },
-  onLogin() {
     getOpenid().then(res=>{
       this.setData({
-        openid: res,
+        url: app.webUrl+"login?openid="+res,
       })
       console.log(res)
     })
   },
-  onGetToken() {}
 })
