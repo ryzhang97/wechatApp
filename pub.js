@@ -11,6 +11,7 @@ async function getOpenid(){
   if(!openid){
     code2Session = await login()
     setStorage('code2Session',code2Session)
+    openid=code2Session.openid
   }
   return openid
 }
